@@ -1,0 +1,33 @@
+header {
+  grid-template-columns: 1fr;
+}
+header h1 {
+  text-align: center;
+}
+ul li {
+  margin-right: 0.5rem;
+}
+ul {
+  margin: 2rem 0;
+}
+
+main {
+  grid-template-columns: 1fr;
+  row-gap: 2.7rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form input {
+  margin: 1rem;
+}
+
+.sign {
+  padding: 2rem 1rem;
+}
+.sign h2 {
+  text-align: center;
+}

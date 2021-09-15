@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=0"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -13,261 +16,159 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Karantina:wght@300;700&family=Nunito:wght@300;700&family=Open+Sans+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      media="( max-width:700px)"
-      href="./css/style.mobile.css"
-    />
-    <title>Accueil</title>
+    <link rel="stylesheet" media="(max-width:500px)" href="./css/mobile.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+    <style>
+      .loader {
+        background: #fff;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: wait;
+        z-index: 9999;
+        position: fixed;
+      }
+      .loader div {
+        background: #fff;
+        width: 16px;
+        height: 32px;
+        margin-left: 10px;
+        animation: loader 1.2s infinite;
+      }
+      @keyframes loader {
+        50% {
+          height: 64px;
+        }
+      }
+      .loader div:nth-child(1) {
+        background: #be2529;
+        animation-delay: -0.4s;
+      }
+      .loader div:nth-child(2) {
+        background: #be2529;
+        animation-delay: -0.2s;
+      }
+      .loader div:nth-child(3) {
+        background: #be2529;
+        animation-delay: 0s;
+      }
+      body {
+        background: white;
+        height: 100vh;
+        overflow: auto;
+      }
+    </style>
   </head>
   <body>
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <div class="container">
       <header>
-        <a href="#" class="logo">Le journal de jaja</a>
+        <h1>Le journal de jaja</h1>
         <ul>
           <li><a href="">Devenir membre</a></li>
-          <li><a class="text-primary" href="">Connexion</a></li>
-          <li><button href="" class="btn btn-light">Inscription</button></li>
+          <li><a class="connect" href="">Connexion</a></li>
+          <li><a class="red" href="">Inscription</a></li>
         </ul>
       </header>
       <nav>
-        <a href="">TECH</a>
-        <a href="">MODE</a>
-        <a href="">POLITIQUE</a>
-        <a href="">SOCIAL</a>
-        <a href="">BOUTIQUE</a>
-        <a href="">BLOG</a>
+        <a href="">Mode</a>
+        <a href="">Politique</a>
+        <a href="">Tech</a>
       </nav>
-      <section class="showcase">
-        <article>
-          <img src="./img/bloc-1.jpeg" alt="bloc-1" />
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-          <p class="article-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            necessitatibus minima quibusdam modi ipsa quisquam temporibus,
-            quidem ad obcaecati ducimus totam doloribus corporis repudiandae
-            beatae eos assumenda voluptatem placeat debitis!
+      <main>
+        <div class="content">
+          <img src="./img/bloc-1.jpeg" alt="" />
+          <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita
+            eaque omnis iure aspernatur in quae cum deserunt, consectetur odit.
           </p>
-          <p class="article-author">Lorem, ipsum.</p>
-          <p class="text-hint">
-            Oct 23 - 16 min read <i class="fas fa-star mx-1"></i>
+          <p>Sep 15-16 min read</p>
+          <p><a href="">Read more</a></p>
+        </div>
+
+        <div class="content">
+          <div class="co">
+            <img src="./img/bloc-4.jpeg" alt="" />
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita
+            eaque omnis iure aspernatur in quae cum deserunt, consectetur odit.
           </p>
-        </article>
-        <article class="article-small">
-          <img src="./img/bloc-2.jpeg" alt="bloc-2" />
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-          <p class="article-content">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ea
-            nulla sunt harum non repudiandae sed! Nisi rerum itaque
-            corporiseeeeee suscipit quo id, ratione modi nam sequi quasi, fugit
-            soluta.
+          <p>Sep 15-16 min read</p>
+          <p><a href="">Read more</a></p>
+        </div>
+        <div class="content">
+          <img src="./img/bloc-5.jpeg" alt="" />
+          <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita
+            eaque omnis iure aspernatur in quae cum deserunt, consectetur odit.
           </p>
-          <p class="article-author">Lorem, ipsum.</p>
-          <p class="text-hint">
-            Oct 24 - 45 min read <i class="fas fa-star mx-1"></i>
+          <p>Sep 15-16 min read</p>
+          <p><a href="">Read more</a></p>
+        </div>
+        <div class="content">
+          <div class="co">
+            <img src="./img/bloc-3.jpeg" alt="" />
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita
+            eaque omnis iure aspernatur in quae cum deserunt, consectetur odit.
           </p>
-        </article>
-        <article class="article-small">
-          <img src="./img/bloc-3.jpeg" alt="bloc-3" />
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-          <p class="article-author">Lorem, ipsum.</p>
-          <p class="text-hint">
-            Oct 25 - 25 min read <i class="fas fa-star mx-1"></i>
+          <p>Sep 15-16 min read</p>
+          <p><a href="">Read more</a></p>
+        </div>
+        <div class="content">
+          <div class="co">
+            <img src="./img/bloc-2.jpeg" alt="" />
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita
+            eaque omnis iure aspernatur in quae cum deserunt, consectetur odit.
           </p>
-        </article>
-        <article class="article-small">
-          <img src="./img/bloc-4.jpeg" alt="bloc-4" />
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-          <p class="article-author">Lorem, ipsum.</p>
-          <p class="text-hint">
-            Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-          </p>
-        </article>
-        <article>
-          <img
-            src="https://dyma-images.s3.fr-par.scw.cloud/html-css/projects/project3/bloc-5.jpeg"
-            alt="bloc-5"
-          />
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-          <p class="article-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            necessitatibus minima quibusdam modi ipsa quisquam temporibus,
-            quidem ad obcaecati ducimus totam doloribus corporis repudiandae
-            beatae eos assumenda voluptatem placeat debitis!
-          </p>
-          <p class="article-author">Lorem, ipsum.</p>
-          <p class="text-hint">Oct 26 - 7 min read</p>
-        </article>
-      </section>
-      <hr />
-      <section class="ads">
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+          <p>Sep 15-16 min read</p>
+          <p><a href="">Read more</a></p>
+        </div>
+      </main>
+      <section class="sign">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-          mollitia.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+          reiciendis.
         </p>
-        <form action="#">
-          <input type="text" placeholder="Adresse email" />
-          <button class="btn btn-dark">Inscription</button>
+        <form action="">
+          <input type="email" placeholder="Email" />
+          <button type="submit">Inscription</button>
         </form>
       </section>
-      <section class="content">
-        <div class="articles">
-          <h2 class="underline">Technologie</h2>
-          <article>
-            <img
-              src="https://dyma-images.s3.fr-par.scw.cloud/html-css/projects/project3/bloc-6.jpeg"
-              alt="bloc-6"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              excepturi, aliquid quibusdam officia amet a voluptatum fugiat
-              nesciunt nulla voluptatibus.
-            </p>
-            <p class="article-author">Lorem, ipsum</p>
-            <p class="text-hint">
-              Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-            </p>
-          </article>
-          <article>
-            <img
-              src="https://dyma-images.s3.fr-par.scw.cloud/html-css/projects/project3/bloc-7.jpeg"
-              alt="bloc-7"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              excepturi, aliquid quibusdam officia amet a voluptatum fugiat
-              nesciunt nulla voluptatibus.
-            </p>
-            <p class="article-author">Lorem, ipsum</p>
-            <p class="text-hint">
-              Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-            </p>
-          </article>
-          <article>
-            <img
-              src="https://dyma-images.s3.fr-par.scw.cloud/html-css/projects/project3/bloc-8.jpeg"
-              alt="bloc-8"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              excepturi, aliquid quibusdam officia amet a voluptatum fugiat
-              nesciunt nulla voluptatibus.
-            </p>
-            <p class="article-author">Lorem, ipsum</p>
-            <p class="text-hint">
-              Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-            </p>
-          </article>
-          <h2 class="underline">Mode</h2>
-          <article>
-            <img
-              src="https://dyma-images.s3.fr-par.scw.cloud/html-css/projects/project3/bloc-9.jpeg"
-              alt="bloc-9"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              excepturi, aliquid quibusdam officia amet a voluptatum fugiat
-              nesciunt nulla voluptatibus.
-            </p>
-            <p class="article-author">Lorem, ipsum</p>
-            <p class="text-hint">
-              Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-            </p>
-          </article>
-          <article>
-            <img
-              src="https://dyma-images.s3.fr-par.scw.cloud/html-css/projects/project3/bloc-10.jpeg"
-              alt="bloc-10"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              excepturi, aliquid quibusdam officia amet a voluptatum fugiat
-              nesciunt nulla voluptatibus.
-            </p>
-            <p class="article-author">Lorem, ipsum</p>
-            <p class="text-hint">
-              Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-            </p>
-          </article>
-          <article>
-            <img
-              src="https://dyma-images.s3.fr-par.scw.cloud/html-css/projects/project3/bloc-11.jpeg"
-              alt="bloc-11"
-            />
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              excepturi, aliquid quibusdam officia amet a voluptatum fugiat
-              nesciunt nulla voluptatibus.
-            </p>
-            <p class="article-author">Lorem, ipsum</p>
-            <p class="text-hint">
-              Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-            </p>
-          </article>
-        </div>
-        <div class="popular">
-          <h2 class="underline">Populaires</h2>
-          <ul>
-            <li>
-              <div>01</div>
-              <div>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p class="article-author">Lorem, ipsum</p>
-                <p class="text-hint">
-                  Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-                </p>
-              </div>
-            </li>
-            <li>
-              <div>02</div>
-              <div>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p class="article-author">Lorem, ipsum</p>
-                <p class="text-hint">
-                  Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-                </p>
-              </div>
-            </li>
-            <li>
-              <div>03</div>
-              <div>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p class="article-author">Lorem, ipsum</p>
-                <p class="text-hint">
-                  Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-                </p>
-              </div>
-            </li>
-            <li>
-              <div>04</div>
-              <div>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p class="article-author">Lorem, ipsum</p>
-                <p class="text-hint">
-                  Oct 26 - 2 min read <i class="fas fa-star mx-1"></i>
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
     </div>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>
